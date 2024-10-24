@@ -97,9 +97,9 @@ echo "signed image successfully!"
 # package image for use in odin
 echo "packaging image for odin..."
 cd $csd/output/
-tar -cvf ./patched-recovery.tar ./recovery.img &&
-md5sum -t ./patched-recovery.tar >> ./patched-recovery.tar &&
-mv ./patched-recovery.tar ./patched-recovery.tar.md5 &&
+tar -cvf patched-recovery.tar recovery.img &&
+md5sum -t patched-recovery.tar >> patched-recovery.tar &&
+mv patched-recovery.tar patched-recovery.tar.md5 &&
 echo "successfully packaged recovery.img -> patched-recovery.tar.md5"
 
 # hehe
