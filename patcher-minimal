@@ -14,7 +14,7 @@ pass=":"
 existance $csd/recovery.img.lz4 $pass $pass
 if [ $found == true ]; then
    echo "found lz4-zipped image!"
-	lz4 -B6 --content-size -f recovery.img.lz4 recovery.img
+   lz4 -B6 --content-size -f recovery.img.lz4 recovery.img
    mv $csd/recovery.img $csd/raw.img &&
 fi
 else existance $csd/recovery.img $pass $pass
