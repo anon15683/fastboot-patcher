@@ -112,10 +112,11 @@ message success "signed image successfully!"
 
 # package image for use in odin
 message info "packaging image for odin..."
-tar -cvf $csd/patched-recovery.tar $csd/recovery.img &&
+cd $csd
+tar -cvf patched-recovery.tar recovery.img &&
 # hold off on this; what does it even do?
-md5sum -t $csd/patched-recovery.tar >> $csd/patched-recovery.tar &&
-mv $csd/patched-recovery.tar $csd/patched-recovery.tar.md5 &&
+md5sum -t patched-recovery.tar >> patched-recovery.tar &&
+mv patched-recovery.tar patched-recovery.tar.md5 &&
 message success "successfully packaged recovery.img -> patched-recovery.tar"
 
 # dispose of any unnecessary files
